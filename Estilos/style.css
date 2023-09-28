@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-image: url(../Media/Fondos/fondoP.png);
+    background-size: cover;
+}
+div{
+    position: relative;
+    width: 30vw;
+    height: 25vh;
+    margin-left: 12vw;
+    margin-top: 15vh;
+    transition: all .3s ease;
+    display: inline-block;
+}
+div img:first-child{
+    width: 100%;
+    height: 100%;
+    box-shadow:  10px 20px 10px -10px black;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.Doni{
+    opacity: 0;
+    width: 80%;
+    height: 160%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition:  .3s ease;
+    transform: translateY(25%);
+    margin: auto;
+}
+.Leo{
+    opacity: 0;
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition:  .3s ease;
+    transform: translateY(25%);
+}
+.Rafa{
+    opacity: 0;
+    width: 120%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition:  .3s ease;
+    transform: translateY(25%);
+    margin: auto;
+}
+.Mike{
+    opacity: 0;
+    width: 130%;
+    height: 180%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition:  .3s ease;
+    transform: translateY(25%);
+    margin: auto;
+}
+
+div:hover{
+    /* Emparejamos con la rotacion parametros 3D */
+    transform:perspective(250px)
+    rotateX(10deg)
+    /* Gira hacia atras la imagen  */
+    translateY(-2%)
+    translateX(0)
+    translateZ(0)
+    
+    scaleX(110% );
+}
+
+div::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left,  rgba(155, 255, 5, 0.278), rgba(255, 204, 0, 0.2));
+    opacity: 0;
+    transition: all .3s ease;
+    backdrop-filter: blur(0.3px);
+    border-radius: 15px;
+}
+div:hover::before{
+opacity: 1;
+}
+div:hover img:last-child{
+    opacity: 1;
+}
